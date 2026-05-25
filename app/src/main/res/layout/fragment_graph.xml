@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary"
+    android:clipToPadding="false"
+    android:padding="@dimen/padding_default"
+    tools:context=".GraphFragment">
+
+    <TextView
+        android:id="@+id/graph_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/graph_choice"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_largest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graph_text">
+
+        <ImageButton
+            android:id="@+id/btn_hr_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:contentDescription="@string/heart_name"
+            android:src="@drawable/ic_hr"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/btn_spo2_image"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_min="130dp" />
+
+        <TextView
+            android:id="@+id/hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heart_rate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintBottom_toTopOf="@+id/hr_sub"
+            app:layout_constraintEnd_toEndOf="@+id/btn_hr_image"
+            app:layout_constraintStart_toStartOf="@+id/btn_hr_image" />
+
+        <TextView
+            android:id="@+id/hr_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/heart_name"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_hr_image"
+            app:layout_constraintEnd_toEndOf="@+id/hr"
+            app:layout_constraintStart_toStartOf="@+id/hr" />
+
+        <ImageButton
+            android:id="@+id/btn_spo2_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:contentDescription="@string/saturation_of_peripheral_o2_name"
+            android:src="@drawable/ic_spo2"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_hr_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_min="130dp"
+            app:tint="@color/background_disabled" />
+
+        <TextView
+            android:id="@+id/spo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saturation_of_peripheral_o2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintBottom_toTopOf="@+id/spo2_sub"
+            app:layout_constraintEnd_toEndOf="@+id/btn_spo2_image"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="@+id/btn_spo2_image" />
+
+        <TextView
+            android:id="@+id/spo2_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/saturation_of_peripheral_o2_name"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_spo2_image"
+            app:layout_constraintEnd_toEndOf="@+id/spo2"
+            app:layout_constraintStart_toStartOf="@+id/spo2" />
+
+        <ImageButton
+            android:id="@+id/btn_hrv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:clickable="false"
+            android:contentDescription="@string/heart_rate_variability_name"
+            android:src="@drawable/ic_hrv"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_pi_image"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_hr_image"
+            app:layout_constraintWidth_min="130dp"
+            app:tint="@color/background_disabled" />
+
+        <TextView
+            android:id="@+id/hrv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heart_rate_variability"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintBottom_toTopOf="@+id/hrv_sub"
+            app:layout_constraintEnd_toEndOf="@+id/btn_hrv_image"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btn_hrv_image" />
+
+        <TextView
+            android:id="@+id/hrv_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/heart_rate_variability_name"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_hrv_image"
+            app:layout_constraintEnd_toEndOf="@+id/hrv"
+            app:layout_constraintStart_toStartOf="@+id/hrv" />
+
+        <ImageButton
+            android:id="@+id/btn_pi_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:clickable="false"
+            android:contentDescription="@string/perfusion_index_name"
+            android:src="@drawable/ic_pi"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_hrv_image"
+            app:layout_constraintTop_toBottomOf="@+id/btn_spo2_image"
+            app:layout_constraintWidth_min="130dp"
+            app:tint="@color/background_disabled" />
+
+        <TextView
+            android:id="@+id/pi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perfusion_index"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintBottom_toTopOf="@+id/pi_sub"
+            app:layout_constraintEnd_toEndOf="@+id/btn_pi_image"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btn_pi_image" />
+
+        <TextView
+            android:id="@+id/pi_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="@string/perfusion_index_name"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_pi_image"
+            app:layout_constraintEnd_toEndOf="@+id/pi"
+            app:layout_constraintStart_toStartOf="@+id/pi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

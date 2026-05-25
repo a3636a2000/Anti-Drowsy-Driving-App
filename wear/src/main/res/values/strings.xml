@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DONOFF Watch</string>
+    <string name="start_title">나의 심박수는?</string>
+    <string name="start_hint">이미지 클릭하여 시작!</string>
+    <string name="screen_title">심박수</string>
+    <string name="loading_hint">연결 중...</string>
+    <string name="bpm_unit">BPM</string>
+    <string name="permission_denied">신체 센서 권한이 필요합니다</string>
+    <string name="sensor_not_found">심박수 센서를 찾을 수 없습니다</string>
+</resources>

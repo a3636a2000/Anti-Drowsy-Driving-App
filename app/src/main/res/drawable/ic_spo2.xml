@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/size_icon_btn_graph"
+    android:height="@dimen/size_icon_btn_graph"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M32.03,82.81C14.37,82.81 0,68.33 0,50.52C0,32.72 14.37,18.23 32.03,18.23S64.06,32.72 64.06,50.52C64.06,68.33 49.69,82.81 32.03,82.81zM32.03,23.44C17.24,23.44 5.21,35.59 5.21,50.52S17.24,77.6 32.03,77.6s26.82,-12.15 26.82,-27.08S46.82,23.44 32.03,23.44z" />
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M64.84,98.44c-13.35,0 -24.22,-10.86 -24.22,-24.22S51.49,50 64.84,50s24.22,10.86 24.22,24.22S78.2,98.44 64.84,98.44zM64.84,55.21c-10.48,0 -19.01,8.53 -19.01,19.01s8.53,19.01 19.01,19.01S83.85,84.7 83.85,74.22S75.33,55.21 64.84,55.21z" />
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M84.9,31.25c-8.33,0 -15.1,-6.66 -15.1,-14.84s6.78,-14.84 15.1,-14.84S100,8.22 100,16.41S93.22,31.25 84.9,31.25zM84.9,6.77c-5.46,0 -9.9,4.32 -9.9,9.64s4.44,9.64 9.9,9.64s9.9,-4.32 9.9,-9.64S90.35,6.77 84.9,6.77z" />
+</vector>

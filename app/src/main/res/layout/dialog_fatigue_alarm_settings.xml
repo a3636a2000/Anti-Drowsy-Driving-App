@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/fatigue_alarm_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tos_shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fatigue_alarm_settings" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_screen_blink"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="true"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:minWidth="200dp"
+                android:text="@string/fatigue_alarm_screen_blink"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_vibration"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="true"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:minWidth="200dp"
+                android:text="@string/fatigue_alarm_vibration"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_sound"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="true"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:minWidth="200dp"
+                android:text="@string/fatigue_alarm_sound"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_okay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingHorizontal="@dimen/padding_large"
+            android:text="@string/submit" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

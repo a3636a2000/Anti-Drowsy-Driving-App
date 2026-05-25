@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tos_shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/face_visible_choice" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_eye"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:id="@+id/eye"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/eye"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_eyebrow"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:id="@+id/eye_brow"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/eye_brow"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_pupil"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:id="@+id/eye_pupil"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/eye_pupil"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_lip"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:id="@+id/lip"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/lip"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_face_line"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:id="@+id/face_line"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/face_line"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_face_mesh"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:checked="false"
+                android:drawableStart="@drawable/bg_checkbox"
+                android:drawablePadding="@dimen/padding_smallest"
+                android:textSize="@dimen/text_x_small" />
+
+            <TextView
+                android:id="@+id/face_mesh"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/face_mesh"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/color_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/black"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:background="@color/black"
+                android:contentDescription="@string/black" />
+
+            <ImageView
+                android:id="@+id/white"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:background="@color/white"
+                android:contentDescription="@string/white" />
+
+            <ImageView
+                android:id="@+id/orange"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:background="@color/orange"
+                android:contentDescription="@string/orange" />
+
+            <ImageView
+                android:id="@+id/blue"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:background="@color/blue"
+                android:contentDescription="@string/blue" />
+
+            <ImageView
+                android:id="@+id/red"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:background="@color/red"
+                android:contentDescription="@string/red" />
+
+            <ImageView
+                android:id="@+id/green"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:background="@color/green"
+                android:contentDescription="@string/green" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_okay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingHorizontal="@dimen/padding_large"
+            android:text="@string/submit" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

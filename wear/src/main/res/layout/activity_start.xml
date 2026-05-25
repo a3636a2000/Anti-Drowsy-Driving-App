@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    시작 화면
+    - 진입 시 타이틀·심장·힌트 텍스트가 순서대로 페이드+슬라이드 인
+    - 3개의 파문 원(ripple1~3)이 심장 뒤에서 확장·소멸 반복
+    - 심장은 박동 scale 애니메이션
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <!-- 상단 타이틀 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_title"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 심장 + 파문 이펙트 컨테이너 -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- 파문 원 3개 (심장 뒤에 위치) -->
+            <View
+                android:id="@+id/ripple1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_circle"
+                android:alpha="0" />
+
+            <View
+                android:id="@+id/ripple2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_circle"
+                android:alpha="0" />
+
+            <View
+                android:id="@+id/ripple3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ripple_circle"
+                android:alpha="0" />
+
+            <!-- 심장 아이콘 (클릭 가능) -->
+            <ImageView
+                android:id="@+id/iv_heart"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_heart"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </FrameLayout>
+
+        <!-- 힌트 텍스트 -->
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_hint"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</FrameLayout>

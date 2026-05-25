@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ECG 파형 진행 애니메이션 (AnimatedVectorDrawable)
+    trimPathEnd 0→1, trimPathStart 0→1 (600ms 딜레이)로
+    파형이 왼쪽→오른쪽으로 그려지다가 지워지는 이동 효과를 만듭니다.
+-->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="110dp"
+            android:height="40dp"
+            android:viewportWidth="110"
+            android:viewportHeight="40">
+            <path
+                android:name="ecg_path"
+                android:strokeColor="#FFFFFF"
+                android:strokeWidth="2.5"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:trimPathStart="0"
+                android:trimPathEnd="0"
+                android:pathData="M0,20 L18,20 L24,20 L29,5 L34,35 L39,20 L55,20 L60,20 L65,10 L70,30 L75,20 L110,20" />
+        </vector>
+    </aapt:attr>
+
+    <target android:name="ecg_path">
+        <aapt:attr name="android:animation">
+            <set>
+                <!-- 파형 끝단: 0→1 (전체 구간을 그려나감) -->
+                <objectAnimator
+                    android:propertyName="trimPathEnd"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:duration="1200"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:interpolator/linear" />
+                <!-- 파형 시작단: 0→1 (600ms 뒤부터 지워나감) → 이동하는 파형 효과 -->
+                <objectAnimator
+                    android:propertyName="trimPathStart"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:startOffset="600"
+                    android:duration="1200"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:interpolator/linear" />
+            </set>
+        </aapt:attr>
+    </target>
+
+</animated-vector>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="world.saloris.donoff.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_registerSuccessFragment"
+            app:destination="@id/registerSuccessFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerSuccessFragment"
+        android:name="world.saloris.donoff.RegisterSuccessFragment"
+        android:label="fragment_register_success"
+        tools:layout="@layout/fragment_register_success">
+        <action
+            android:id="@+id/action_registerSuccessFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginStartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginStartFragment"
+        android:name="world.saloris.donoff.LoginStartFragment"
+        android:label="fragment_login_start"
+        tools:layout="@layout/fragment_login_start">
+        <action
+            android:id="@+id/action_loginStartFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginStartFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="world.saloris.donoff.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_findPasswordFragment"
+            app:destination="@id/findPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="world.saloris.donoff.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_stateActivity"
+            app:destination="@id/stateActivity"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@+id/scanFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="world.saloris.donoff.ScanFragment"
+        android:label="fragment_scan"
+        tools:layout="@layout/fragment_scan">
+        <action
+            android:id="@+id/action_scanFragment_to_stateActivity"
+            app:destination="@id/stateActivity"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+
+    <activity
+        android:id="@+id/stateActivity"
+        android:name="world.saloris.donoff.StateActivity"
+        android:label="activity_state"
+        tools:layout="@layout/activity_state" />
+
+    <fragment
+        android:id="@+id/graphFragment"
+        android:name="world.saloris.donoff.GraphFragment"
+        android:label="fragment_graph"
+        tools:layout="@layout/fragment_graph">
+        <action
+            android:id="@+id/action_graphFragment_to_graphHrFragment"
+            app:destination="@id/graphHrFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/graphHrFragment"
+        android:name="world.saloris.donoff.GraphHrFragment"
+        android:label="fragment_graph_hr"
+        tools:layout="@layout/fragment_graph_hr" />
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="world.saloris.donoff.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_accountFragment_to_loginStartFragment"
+            app:destination="@id/loginStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findPasswordFragment"
+        android:name="world.saloris.donoff.FindPasswordFragment"
+        android:label="fragment_find_password"
+        tools:layout="@layout/fragment_find_password" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="world.saloris.donoff.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+
+</navigation>

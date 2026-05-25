@@ -1,0 +1,24 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+logcat.txt
+
+# Korean locale resources (kept locally, not uploaded)
+app/src/main/res/values-ko/
+app/src/main/res/font/notosans_kr_*.otf
+
+# Secrets & signing (never commit)
+app/src/main/resources/influx2.properties
+app/google-services.json
+*.jks
+*.keystore
+keystore.properties
+signing.properties

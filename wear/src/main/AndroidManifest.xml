@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="world.saloris.donoff.wear">
+
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 이 앱이 Wear OS 기기 전용임을 선언 -->
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_heart"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.WearApp">
+
+        <!-- 시작 화면 -->
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 로딩 화면 (센서 초기화) -->
+        <activity
+            android:name=".LoadingActivity"
+            android:exported="false" />
+
+        <!-- 메인 화면 (심박수 모니터링) -->
+        <activity
+            android:name=".MainWatchActivity"
+            android:exported="false" />
+
+    </application>
+</manifest>

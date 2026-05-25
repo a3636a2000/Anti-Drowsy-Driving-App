@@ -1,0 +1,8 @@
+influx2.url=https://your-influx-cloud-url
+influx2.org=your-org
+influx2.bucket=DONOFF
+influx2.token=your-token-here
+influx2.logLevel=BODY
+influx2.readTimeout=5s
+influx2.writeTimeout=10s
+influx2.connectTimeout=5s

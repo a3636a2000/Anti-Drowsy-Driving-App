@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ECG(심전도) 파형 아이콘 - 로딩 화면에 사용 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="110dp"
+    android:height="40dp"
+    android:viewportWidth="110"
+    android:viewportHeight="40">
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M0,20 L18,20 L24,20 L29,5 L34,35 L39,20 L55,20 L60,20 L65,10 L70,30 L75,20 L110,20" />
+</vector>

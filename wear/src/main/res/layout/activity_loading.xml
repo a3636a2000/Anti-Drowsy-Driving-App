@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    로딩 화면
+    - 타이틀 페이드 인
+    - ECG 파형: ic_ecg_anim (AnimatedVectorDrawable) - 파형이 좌→우로 이동
+    - 로딩 힌트: "연결 중" → "연결 중." → "연결 중.." → "연결 중..." 도트 애니메이션
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_title"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="28dp"
+            android:alpha="0" />
+
+        <!-- AnimatedVectorDrawable ECG 파형 -->
+        <ImageView
+            android:id="@+id/iv_ecg"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_ecg_anim"
+            android:alpha="0" />
+
+        <!-- 도트 로딩 텍스트 -->
+        <TextView
+            android:id="@+id/tv_loading_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_hint"
+            android:textColor="#888888"
+            android:textSize="11sp"
+            android:layout_marginTop="20dp"
+            android:alpha="0" />
+
+    </LinearLayout>
+</FrameLayout>
